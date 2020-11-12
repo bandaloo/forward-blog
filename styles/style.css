@@ -158,6 +158,10 @@ button#dark-light-button {
   background-image: url("../images/basketball-room-second.png");
 }
 
+.bg-image-third-playable {
+  background-image: url("../images/alarm-clock-third.png");
+}
+
 .parent:hover .child,
 .parent:focus .child {
   transform: scale(1.2);
