@@ -162,6 +162,10 @@ button#dark-light-button {
   background-image: url("../images/alarm-clock-third.png");
 }
 
+.bg-image-alphafest {
+  background-image: url("../images/alphafest-logo.png");
+}
+
 .parent:hover .child,
 .parent:focus .child {
   transform: scale(1.2);
