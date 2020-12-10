@@ -171,6 +171,10 @@ button#dark-light-button {
   background-image: url("../images/alphafest-logo.png");
 }
 
+.bg-image-image-gallery {
+  background-image: url("../images/sound-equipment.jpg");
+}
+
 .parent:hover .child,
 .parent:focus .child {
   transform: scale(1.2);
