@@ -15,14 +15,30 @@
 
   <body id="body" class="dark-mode">
     <main>
-      <h1>Forward Dev Log</h1>
       <div id="art"></div>
       <p>
         Forward is a game about recovery. Inspired by real life events, Forward
-        takes you through a disassociative journey, recovering physically and
-        mentally in a hospital after a life threatening accident.
+        takes you through a surreal journey, recovering physically and mentally
+        in a hospital after a life threatening accident.
       </p>
-      <span class="author"></span>
+
+      <p>
+        Forward was created for Game Design Studio at WPI. You can watch our
+        trailer and read our weekly dev log on this site. Visit our
+        <a href="https://forwardgame.itch.io/forward">itch.io page</a> to
+        download the game and play it for yourself.
+      </p>
+
+      <div class="videocontainer">
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/QdUjR-2Ob6c"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
       <br />
       <!-- links to the various articles -->
       <div class="parent blogimage">
@@ -88,8 +104,6 @@
       "suefiiha",
       "xbimnuup",
       "faesdmxg",
-      "bcyzgzcm",
-      "qpdltxdi",
       "rajddioo",
       "uanswoca",
       "tzezpcyq",
@@ -102,7 +116,6 @@
       "hqhohkjj",
       "zvoqepxd",
       "xsfgbxjp",
-      "zlzgsjpy",
       "kktigzqf",
       "ofapqpsz",
       "zzlmhtnr",
@@ -118,11 +131,32 @@
       "xwnwfjhf",
       "zecrnjua",
       "sommvfqk",
+      "zsgupswo",
+      "gugaxqnf",
+      "rtssdzzc",
+      "hdjsvnhg",
+      "qvdofjvt",
+      "qlgwwgtt",
+      "jvyxrfpu",
     ];
+
+    let prevIndex;
+
+    const art = (artMaker) => {
+      let index = Math.floor(Math.random() * seeds.length);
+      if (index === prevIndex) index = (index + 1) % seeds.length;
+      prevIndex = index;
+      const seed = seeds[index];
+      console.log(seed);
+      artMaker.seed(seed);
+      artMaker.animate();
+    };
+
     try {
       const artMaker = new ArtMaker(960, 540);
-      artMaker.seed(seeds[Math.floor(Math.random() * seeds.length)]);
-      artMaker.animate();
+      art(artMaker);
+      const canvas = document.querySelector("#artcanvas");
+      canvas.addEventListener("click", () => art(artMaker));
     } catch (e) {
       const div = document.querySelector("#art");
       const img = document.createElement("img");

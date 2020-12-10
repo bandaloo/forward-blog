@@ -57,6 +57,7 @@ img.clipped {
 
 canvas {
   width: 100%;
+  cursor: pointer;
 }
 
 time.blogdate,
