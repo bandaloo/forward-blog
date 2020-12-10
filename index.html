@@ -116,8 +116,16 @@
       "vkxpvozs",
       "dalkonhx",
     ];
-    const artMaker = new ArtMaker(960, 540);
-    artMaker.seed(seeds[Math.floor(Math.random() * seeds.length)]);
-    artMaker.animate();
+    try {
+      const artMaker = new ArtMaker(960, 540);
+      artMaker.seed(seeds[Math.floor(Math.random() * seeds.length)]);
+      artMaker.animate();
+    } catch (e) {
+      const div = document.querySelector("#art");
+      const img = document.createElement("img");
+      img.src = "images/logo-backup.png";
+      img.classList.add("blogimage");
+      div.appendChild(img);
+    }
   </script>
 </html>
