@@ -39,7 +39,7 @@ li {
 main {
   margin: 0 auto;
   padding: 0 1em;
-  max-width: 43em;
+  max-width: 960px;
 }
 
 img.blogimage {
@@ -53,6 +53,10 @@ img.blogimage {
 
 img.clipped {
   clip-path: inset(30% 0 30% 0);
+}
+
+canvas {
+  width: 100%;
 }
 
 time.blogdate,

@@ -16,9 +16,11 @@
   <body id="body" class="dark-mode">
     <main>
       <h1>Forward Dev Log</h1>
+      <div id="art"></div>
       <p>
-        Welcome to our blog for the game Forward! We will update this page
-        weekly.
+        Forward is a game about recovery. Inspired by real life events, Forward
+        takes you through a disassociative journey, recovering physically and
+        mentally in a hospital after a life threatening accident.
       </p>
       <span class="author"></span>
       <br />
@@ -80,4 +82,42 @@
     </footer>
   </body>
   <script src="scripts/darklight.js"></script>
+  <script src="scripts/artmaker.min.js"></script>
+  <script>
+    const seeds = [
+      "suefiiha",
+      "xbimnuup",
+      "faesdmxg",
+      "bcyzgzcm",
+      "qpdltxdi",
+      "rajddioo",
+      "uanswoca",
+      "tzezpcyq",
+      "xdlvpyph",
+      "sykcjcju",
+      "wiuojypx",
+      "qgdxhkui",
+      "ynnufvos",
+      "pabniqlh",
+      "hqhohkjj",
+      "zvoqepxd",
+      "xsfgbxjp",
+      "zlzgsjpy",
+      "kktigzqf",
+      "ofapqpsz",
+      "zzlmhtnr",
+      "rgxosjjc",
+      "uzekkoeo",
+      "ynnbzeuj",
+      "ypjsqgde",
+      "eqxzexrv",
+      "dhpzsibr",
+      "oblvrlch",
+      "vkxpvozs",
+      "dalkonhx",
+    ];
+    const artMaker = new ArtMaker(960, 540);
+    artMaker.seed(seeds[Math.floor(Math.random() * seeds.length)]);
+    artMaker.animate();
+  </script>
 </html>
